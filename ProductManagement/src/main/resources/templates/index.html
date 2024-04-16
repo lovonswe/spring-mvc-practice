@@ -30,7 +30,7 @@
                 <td th:text="${product.price}"> Price </td>
                 <td>
                     <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
-                    <a th:href="@{'/edit/' + ${product.id}}">Edit Product</a>
+                    <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
                 </td>
             </tr>
         </tbody>

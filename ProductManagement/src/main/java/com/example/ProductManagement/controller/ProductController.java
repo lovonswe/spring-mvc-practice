@@ -48,8 +48,14 @@ public class ProductController {
         ModelAndView mav = new ModelAndView("edit_product");
         Product product = productService.get(id);
         mav.addObject("product", product);
-
         return mav;
+    }
+
+    @RequestMapping(value = "/delete/{id}") //dont use method delete here cause then redirect will not work , redirect typically work for get and post methods
+    public String deleteProduct(@PathVariable Long id) {
+        productService.delete(id);
+        log.info("nahid");
+        return "redirect:/";
     }
 
 }

@@ -14,7 +14,7 @@
 <div align="center">
     <h1>Edit Product form</h1>
     <br />
-    <form action="#" th:action="@{/edit}" th:object="${product}" method="post">
+    <form action="#" th:action="@{/save}" th:object="${product}" method="post">
         <div class="input-item-container">
             <label>Product Id : </label>
             <input type="number" th:field="*{id}" readonly="readonly"/>
@@ -42,6 +42,9 @@
             <input type="submit" />
         </div>
     </form>
+    <div>
+        <a th:href="@{'/'}">Back</a>
+    </div>
 </div>
 
 </body>
